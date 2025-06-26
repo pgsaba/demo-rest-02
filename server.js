@@ -43,17 +43,17 @@ app.get('/metrics', async (req, res, next) => {
 
 // Time routes after here.
 app.use(requestTimer);
-
+/*
 // Log routes after here.
 const pino = require('pino')({
   level: PRODUCTION ? 'info' : 'debug',
 });
 app.use(require('pino-http')({logger: pino}));
-
+*/
 app.get('/', (req, res) => {
   // Use req.log (a `pino` instance) to log JSON:
-  req.log.info({message: 'Hello from Node.js Starter Application!'});
-  res.send('Hello from Node.js Starter Application!');
+ // req.log.info({message: 'Hello from Node.js Starter Application!'});
+  res.send('Passaporto');
 });
 
 app.get('*', (req, res) => {
